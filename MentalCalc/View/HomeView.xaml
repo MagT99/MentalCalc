@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MentalCalc.View.HomeView"
+             xmlns:viewModel="clr-namespace:MentalCalc.ViewModel"
+             x:DataType="viewModel:HomeViewModel"
+             Title="Home">
+    <VerticalStackLayout>
+        <Label 
+            Text="Welcome to mental calc!"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            Margin="5"
+            FontSize="20"/>
+
+        <Button
+            Text="Start"
+            Background="Green"
+            WidthRequest="100"
+            HeightRequest="25"
+            Command="{Binding StartCommand}"
+            Margin="5"/>
+
+        <Button
+            Text="Settings"
+            Background="Grey"
+            WidthRequest="100"
+            HeightRequest="25"
+            Command="{Binding SettingsCommand}"
+            Margin="5"/>
+
+
+    </VerticalStackLayout>
+</ContentPage>
